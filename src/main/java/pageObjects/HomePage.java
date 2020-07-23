@@ -38,18 +38,7 @@ public class HomePage extends BasePage {
 	@FindBy(css = ".shop-phone strong")
 	private WebElement shopPhoneNumber;
 
-	@FindBy(xpath = "(//a[contains(@class,'products-block-image content_img')]//img)[1]")
-	private WebElement Select1StProduct;
 	
-	@FindBy(xpath = "//button[@name='Submit']//span[1]")
-	private WebElement Addtocart;
-	@FindBy(xpath = "(//a[contains(@class,'btn btn-default')]//span)[2]")
-	private WebElement proceedToCheckout;
-	@FindBy(xpath = "//span[@title='Close window']")
-	private List<WebElement> proceedToCheckoutBox;
-	@FindBy(xpath = "//a[contains(@class,'button btn')]//span[1]")
-	private List<WebElement> proceedToCheckoutButton;
-;
 	//
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -102,34 +91,15 @@ public class HomePage extends BasePage {
 	}
 	
 	
-	//Product add Method  by Avik
-	public void Select1stProdduct() throws InterruptedException {
-		BrowserUtil.click(Select1StProduct);
-		BrowserUtil.click(BrowserUtil.ElementWaitToClickable(Addtocart));
-		BrowserUtil.PageReadyStateCheck(4000);
-		
-		if(proceedToCheckoutBox!=null) {
-			BrowserUtil.click(BrowserUtil.ElementWaitToClickable(proceedToCheckout));
-			Assert.assertTrue(true,"Procced to Checkout");
-		}else {
-			Assert.assertTrue(false,"Procced to Checkout");
-		}
-		
-		if(proceedToCheckoutButton!=null) {
-			Assert.assertTrue(true,"Product is added in cart");
-		}else {
-			Assert.assertTrue(false,"Product is not added in cart");
-		}
-	}
+
 	
 	
 	//Product Search function  by Avik
-	public void SearchProduct(String productName) throws InterruptedException {
-		BrowserUtil.write(searchBar, productName);
-		BrowserUtil.click(searchButton);
-		BrowserUtil.PageReadyStateCheck(5000);
-	}
-
+		public void SearchProduct(String productName) throws InterruptedException {
+			BrowserUtil.write(searchBar, productName);
+			BrowserUtil.click(searchButton);
+			BrowserUtil.PageReadyStateCheck(5000);
+		}
 	
 	
 }

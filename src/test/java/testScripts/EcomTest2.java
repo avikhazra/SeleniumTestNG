@@ -20,10 +20,12 @@ import org.testng.annotations.Test;
 import framework.BaseTest;
 import framework.ExcelUtil;
 import pageObjects.HomePage;
+import pageObjects.ProductDetailPage;
 
 public class EcomTest2 extends BaseTest{
 	private static final Logger log = Logger.getLogger(EcomTest2.class);
 	public HomePage hp;
+	public ProductDetailPage PP;
 	@DataProvider(name="TD_Ecom")
 	public Iterator<Object[]> getTestData(Method method) {
 		
@@ -45,7 +47,7 @@ public class EcomTest2 extends BaseTest{
 	public void SelectProductToCart_test1(HashMap<String, String> data) throws InterruptedException {
 		// All new function has description
 		 hp.SearchProduct(data.get("SearchString"));
-		 hp.Select1stProdduct(); // It will select the always first product
+		 PP.Select1stProdduct(); // It will select the always first product
 
 		
 	}
