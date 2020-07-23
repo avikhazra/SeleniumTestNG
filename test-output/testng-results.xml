@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="66894" started-at="2020-07-23T09:55:33Z" finished-at="2020-07-23T09:56:39Z">
+    <groups>
+    </groups>
+    <test name="Functional" duration-ms="66894" started-at="2020-07-23T09:55:33Z" finished-at="2020-07-23T09:56:39Z">
+      <class name="testScripts.EcomTest2">
+        <test-method status="PASS" signature="beforeSuiteSetup()[pri:0, instance:testScripts.EcomTest2@75f32542]" name="beforeSuiteSetup" is-config="true" duration-ms="20" started-at="2020-07-23T09:55:32Z" finished-at="2020-07-23T09:55:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteSetup -->
+        <test-method status="PASS" signature="beforeTestRun(java.lang.String, int, int, java.lang.String)[pri:0, instance:testScripts.EcomTest2@75f32542]" name="beforeTestRun" is-config="true" duration-ms="7460" started-at="2020-07-23T09:55:33Z" finished-at="2020-07-23T09:55:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[donotspillthesecret!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestRun -->
+        <test-method status="PASS" signature="BeforeTheTest()[pri:0, instance:testScripts.EcomTest2@75f32542]" name="BeforeTheTest" is-config="true" duration-ms="32024" started-at="2020-07-23T09:55:40Z" depends-on-methods="framework.BaseTest.beforeTestRun" finished-at="2020-07-23T09:56:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeTheTest -->
+        <test-method status="PASS" signature="SelectProductToCart_test1(java.util.HashMap)[pri:0, instance:testScripts.EcomTest2@75f32542]" name="SelectProductToCart_test1" duration-ms="18106" started-at="2020-07-23T09:56:13Z" data-provider="TD_Ecom" finished-at="2020-07-23T09:56:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SearchString=Printed Summer Dress}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectProductToCart_test1 -->
+        <test-method status="PASS" signature="SelectProductToCart_test1(java.util.HashMap)[pri:0, instance:testScripts.EcomTest2@75f32542]" name="SelectProductToCart_test1" duration-ms="8314" started-at="2020-07-23T09:56:31Z" data-provider="TD_Ecom" finished-at="2020-07-23T09:56:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{SearchString=Printed Chiffon Dress}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectProductToCart_test1 -->
+        <test-method status="PASS" signature="AfterTestRun()[pri:0, instance:testScripts.EcomTest2@75f32542]" name="AfterTestRun" is-config="true" duration-ms="0" started-at="2020-07-23T09:56:39Z" depends-on-methods="testScripts.EcomTest2.AfterTheest" finished-at="2020-07-23T09:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTestRun -->
+        <test-method status="PASS" signature="AfterTheest()[pri:0, instance:testScripts.EcomTest2@75f32542]" name="AfterTheest" is-config="true" duration-ms="0" started-at="2020-07-23T09:56:39Z" finished-at="2020-07-23T09:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterTheest -->
+        <test-method status="PASS" signature="AfterSuiteTeardown()[pri:0, instance:testScripts.EcomTest2@75f32542]" name="AfterSuiteTeardown" is-config="true" duration-ms="1" started-at="2020-07-23T09:56:39Z" finished-at="2020-07-23T09:56:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuiteTeardown -->
+      </class> <!-- testScripts.EcomTest2 -->
+    </test> <!-- Functional -->
+  </suite> <!-- Suite -->
+</testng-results>

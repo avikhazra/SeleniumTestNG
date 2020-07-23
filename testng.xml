@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="browser" value="chrome" />
+	<parameter name="implicitWait" value="60" />
+	<parameter name="explicitWait" value="60" />
+	<parameter name="secretKey" value="donotspillthesecret!" />
+  <test name="Functional">
+    <classes>
+<!--       <class name="testScripts.EcomTest2"/> -->
+<!--       <class name="testScripts.Runner"/> -->
+      <class name="testScripts.EcomTest2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
