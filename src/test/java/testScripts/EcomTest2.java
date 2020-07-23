@@ -51,8 +51,8 @@ public class EcomTest2 extends BaseTest{
 	}
 	@AfterTest
 	public void AfterTheest() {
-		driver.close();
-		driver.quit();
+		//driver.close();
+		//driver.quit();
 	}
 	
 	
