@@ -52,25 +52,25 @@ public class BrowserUtil {
 	 *  FunctionName: ElementWaitToClickable
 	 * Argument : 3000 miliSecon
 	 * Functionality: it waits for element for existence, visible and clickablity
+	 * @return 
 	 * 
 	 **************************************************************/
 	public static WebElement ElementWaitToClickable(final WebElement elem) {
-		WebElement webE;
-		Wait<WebDriver> wait1 = new FluentWait<WebDriver>(driver)
-				  .withTimeout(Duration.ofSeconds(3000))
-				  .pollingEvery(Duration.ofSeconds(5))
-				  .ignoring(NoSuchElementException.class);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+			    .withTimeout(Duration.ofSeconds(30))
+			    .pollingEvery(Duration.ofSeconds(5))
+			    .ignoring(NoSuchElementException.class);
 
-				webE = wait1.until(new Function<WebDriver, WebElement>() {
-				  public WebElement apply(WebDriver driver) {
-				    return elem;
-				  }
-				});
-				
-				
-	  wait.until(ExpectedConditions.visibilityOfAllElements(webE));				
-	  wait.until(ExpectedConditions.elementToBeClickable(webE));	
-	  return webE;
+			WebElement Ex = wait.until(new Function<WebDriver, WebElement>() 
+			{
+			    public WebElement apply(WebDriver driver) {
+			    return elem;
+			}
+			});
+		
+	  wait.until(ExpectedConditions.visibilityOfAllElements(Ex));				
+	  wait.until(ExpectedConditions.elementToBeClickable(Ex));	
+	  return elem;
 	}
 	
 	/****************************************************************

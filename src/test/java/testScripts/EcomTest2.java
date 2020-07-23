@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
@@ -18,6 +19,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import framework.BaseTest;
+import framework.BrowserUtil;
 import framework.ExcelUtil;
 import pageObjects.HomePage;
 import pageObjects.ProductDetailPage;
@@ -25,7 +27,7 @@ import pageObjects.ProductDetailPage;
 public class EcomTest2 extends BaseTest{
 	private static final Logger log = Logger.getLogger(EcomTest2.class);
 	public HomePage hp;
-	public ProductDetailPage PP;
+	public ProductDetailPage PP ;
 	@DataProvider(name="TD_Ecom")
 	public Iterator<Object[]> getTestData(Method method) {
 		
@@ -39,19 +41,20 @@ public class EcomTest2 extends BaseTest{
 		}
 		return dp.iterator();
 	}
-	@BeforeTest
+	@BeforeMethod
 	public void BeforeTheTest() {
-		hp = new HomePage(driver); 
+		hp = new HomePage(driver);
+		PP= new ProductDetailPage(driver);
 	}
 	@Test(dataProvider = "TD_Ecom")
 	public void SelectProductToCart_test1(HashMap<String, String> data) throws InterruptedException {
-		// All new function has description
+		
 		 hp.SearchProduct(data.get("SearchString"));
-		 PP.Select1stProdduct(); // It will select the always first product
+		 PP.Select1stProdduct(); 
 
 		
 	}
-	@AfterTest
+	@AfterMethod
 	public void AfterTheest() {
 		//driver.close();
 		//driver.quit();

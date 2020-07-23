@@ -62,6 +62,7 @@ public class BaseTest {
 			default:
 				break;
 			}
+			driver.manage().deleteAllCookies();
 		log.info("Driver initialization completed");	
 		} catch (Exception e) {
 			e.printStackTrace();

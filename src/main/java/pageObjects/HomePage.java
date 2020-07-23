@@ -1,4 +1,3 @@
-
 package pageObjects;
 
 import java.time.Duration;
@@ -8,10 +7,12 @@ import java.util.function.Function;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -40,6 +41,10 @@ public class HomePage extends BasePage {
 
 	
 	//
+	
+	
+	
+
 	public HomePage(WebDriver driver) {
 		super(driver);
 		launchApp(appURL); // driver.get(url)
@@ -61,15 +66,15 @@ public class HomePage extends BasePage {
 		return BrowserUtil.getText(shopPhoneNumber);
 	}
 
-	public ProductDetailPage productDetails(String productName) {
-
-		for (WebElement elem : productResultSet) {
-			if (BrowserUtil.getText(elem).equalsIgnoreCase(productName)) {
-				BrowserUtil.click(elem);
-			}
-		}
-		return new ProductDetailPage();
-	}
+//	public ProductDetailPage productDetails(String productName) {
+//
+//		for (WebElement elem : productResultSet) {
+//			if (BrowserUtil.getText(elem).equalsIgnoreCase(productName)) {
+//				BrowserUtil.click(elem);
+//			}
+//		}
+//		return new ProductDetailPage();
+//	}
 
 	// private actions to be used in page classes only
 	private void launchApp(String url) {
@@ -100,6 +105,7 @@ public class HomePage extends BasePage {
 			BrowserUtil.click(searchButton);
 			BrowserUtil.PageReadyStateCheck(5000);
 		}
+
 	
 	
 }
