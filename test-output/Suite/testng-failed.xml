@@ -10,6 +10,7 @@
       <class name="testScripts.EcomTest2">
         <methods>
           <include name="AfterTestRun"/>
+          <include name="AfterTheest"/>
           <include name="AfterSuiteTeardown"/>
           <include name="beforeTestRun"/>
           <include name="BeforeTheTest"/>
